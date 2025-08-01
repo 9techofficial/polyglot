@@ -3,10 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 // Define the API route
-Route::get('/api', function () {
-    return view('welcome to php services!');
-});
-
 Route::get('/', function () {
-    return view('welcome');
+  return response()->json(['status' => 'success', 'message' => 'Welcome to PHP Services!'], 200);
 });
