@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+
+# Test coverage
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Uvicorn reload artifacts
+*.reload
+*.pid
+
+# Pytest
+.pytest_cache/
+
+# MyPy, Pyright
+.mypy_cache/
+.pyright/
+
+# Pylint
+.pylint.d/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Env files (optional, if you use them)
+.env
+.env.*
