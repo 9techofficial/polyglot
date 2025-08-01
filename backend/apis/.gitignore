@@ -1,0 +1,9 @@
+node_modules
+dist
+logger/*
+public/*
+!public/assets/
+backup/*
+
+.env*
+!.env.example
