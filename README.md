@@ -30,6 +30,7 @@ The backend is composed of independently running services, each built with the l
 | Node.js Service | Node.js + Fastify (TS) | 4001 | Handles Node-specific processing tasks.                                       |
 | PHP Service     | Laravel                | 4002 | Implements business logic suited for PHP/Laravel ecosystem.                   |
 | Python Service  | FastAPI                | 4003 | Designed for high-performance async processing and Python-specific workloads. |
+| Go Service      | Go                     | 4004 | Built for performance and concurrency, ideal for microservices.              |
 
 ---
 
@@ -44,6 +45,7 @@ The backend is composed of independently running services, each built with the l
 │   │   ├── node/      # Node.js Fastify microservice (port 4001)
 │   │   ├── php/       # Laravel microservice (port 4002)
 │   │   └── python/    # FastAPI microservice (port 4003)
+│   │   └── go/        # Go microservice (port 4004)
 └── README.md
 ```
 
@@ -54,17 +56,19 @@ The backend is composed of independently running services, each built with the l
 ### **Prerequisites**
 
 * Node.js (>= 18.x)
+* PNPM (>= 8.x)
 * PHP (>= 8.x)
 * Python (>= 3.10)
 * Composer (for Laravel)
 * pip (for Python dependencies)
+* Go (>= 1.18)
 
 ### **1. Start Frontend**
 
 ```bash
 cd frontend
-npm install
-npm run dev
+pnpm install
+pnpm dev
 # Runs on http://localhost:3000
 ```
 
@@ -72,8 +76,8 @@ npm run dev
 
 ```bash
 cd backend/apis
-npm install
-npm run dev
+pnpm install
+pnpm dev
 # Runs on http://localhost:4000
 ```
 
@@ -81,8 +85,8 @@ npm run dev
 
 ```bash
 cd backend/services/node
-npm install
-npm run dev
+pnpm install
+pnpm dev
 # Runs on http://localhost:4001
 ```
 
@@ -102,6 +106,15 @@ cd backend/services/python
 pip install -r requirements.txt
 uvicorn src.main:app --host 0.0.0.0 --port 4003 --reload
 # Runs on http://localhost:4003
+```
+
+### **6. Start Go Microservice**
+
+```bash
+cd backend/services/go
+go mod tidy
+go run main.go
+# Runs on http://localhost:4004
 ```
 
 ---
